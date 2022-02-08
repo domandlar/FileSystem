@@ -4,6 +4,6 @@
     {
         Task<Entities.File> CreateFileAsync(Entities.File folder);
         Task DeleteFileAsync(int folderId);
-        Task<List<Entities.File>> GetFilesByNameAsync();
+        Task<List<string>> GetFilesByNameAsync(string fileName, int folderId);
     }
 }

@@ -73,6 +73,7 @@
     <Build Include="dbo\Procedures\CheckIfFolderExistsById.sql" />
     <Build Include="dbo\Procedures\CheckIfFileExistsInFolder.sql" />
     <Build Include="dbo\Procedures\CheckIfFileExistsById.sql" />
+    <Build Include="dbo\Procedures\GetFilesByName.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\InsertRootFolder.sql" />

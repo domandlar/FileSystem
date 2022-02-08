@@ -92,9 +92,26 @@ namespace FileSystem.API.Repositories.Files
             }
         }
 
-        public Task<List<Entities.File>> GetFilesByNameAsync()
+        public async Task<List<string>> GetFilesByNameAsync(string fileName, int folderId)
         {
-            throw new NotImplementedException();
+            List<string> files = new List<string>();
+            using (var connection = new SqlConnection(_dbConnectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("GetFilesByName", connection))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@fileName", SqlDbType.NVarChar).Value = fileName;
+                    cmd.Parameters.Add("@folderId", SqlDbType.NVarChar).Value = folderId;
+
+                    connection.Open();
+                    var dataReader = await cmd.ExecuteReaderAsync();
+                    while (dataReader.Read())
+                    {
+                        files.Add(Convert.ToString(dataReader["name"]));
+                    }
+                }
+            }
+            return files;
         }
     }
 }

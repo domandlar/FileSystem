@@ -33,5 +33,12 @@ namespace FileSystem.API.Controllers
             await _fileService.DeleteFileAsync(fileId);
             return Ok();
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetFileAsync(string fileName, int folderId)
+        {
+            var files = await _fileService.GetFilesByNameAsync(fileName, folderId);
+            return Ok(files);
+        }
     }
 }

@@ -33,9 +33,13 @@ namespace FileSystem.API.Services.Files
             await _fileRepository.DeleteFileAsync(fileId);
         }
 
-        public Task<List<Entities.File>> GetFilesByNameAsync()
+        public async Task<List<string>> GetFilesByNameAsync(string fileName, int folderId)
         {
-            throw new NotImplementedException();
+            if (folderId < 1)
+            {
+                folderId = 1;
+            }
+            return await _fileRepository.GetFilesByNameAsync(fileName, folderId);
         }
     }
 }

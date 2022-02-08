@@ -5,7 +5,7 @@
         Task<Entities.File> CreateFileAsync(Entities.File file);
         Task DeleteFileAsync(int fileId);
         Task<bool> CheckIfFileExistsByIdAsync(int fileId);
-        Task<bool> CheckIfFileExistsInFolderAsync(string fileName, int parentId);
-        Task<List<Entities.File>> GetFilesByNameAsync();
+        Task<bool> CheckIfFileExistsInFolderAsync(string fileName, int folderId);
+        Task<List<string>> GetFilesByNameAsync(string fileName, int folderId);
     }
 }
