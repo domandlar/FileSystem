@@ -1,0 +1,7 @@
+﻿IF(NOT EXISTS(SELECT 1 FROM Folder))
+BEGIN
+	INSERT INTO Folder
+	(Name)
+	VALUES
+	(N'root')
+END
