@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FileSystem.Database", "FileSystem.Database\FileSystem.Database.sqlproj", "{17E60E8B-9071-42CB-B525-6F3989632F36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystem.API", "FileSystem.API\FileSystem.API.csproj", "{B0B742DA-D4F8-4A27-A4D3-A3906A955820}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{17E60E8B-9071-42CB-B525-6F3989632F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17E60E8B-9071-42CB-B525-6F3989632F36}.Release|Any CPU.Build.0 = Release|Any CPU
 		{17E60E8B-9071-42CB-B525-6F3989632F36}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B0B742DA-D4F8-4A27-A4D3-A3906A955820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0B742DA-D4F8-4A27-A4D3-A3906A955820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0B742DA-D4F8-4A27-A4D3-A3906A955820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0B742DA-D4F8-4A27-A4D3-A3906A955820}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
