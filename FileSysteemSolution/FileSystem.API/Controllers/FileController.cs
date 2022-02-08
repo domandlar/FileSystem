@@ -1,4 +1,5 @@
 ﻿using FileSystem.API.Models.Files.Requests;
+using FileSystem.API.Services.Files;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,18 +9,28 @@ namespace FileSystem.API.Controllers
     [ApiController]
     public class FileController : ControllerBase
     {
-        
-        [HttpPost]
-        public IActionResult CreateFile([FromBody] CreateFileRequest createFileRequest)
+        private readonly IFileService _fileService;
+        public FileController(IFileService fileService)
         {
+            _fileService = fileService;
+        }
 
-            return Ok();
+        [HttpPost]
+        public async Task<IActionResult> CreateFileAsync([FromBody] CreateFileRequest createFileRequest)
+        {
+            var newFolder = new Entities.File
+            {
+                Name = createFileRequest.FileName,
+                FolderId = createFileRequest.FolderId
+            };
+            var createdFolder = await _fileService.CreateFileAsync(newFolder);
+            return Ok(createdFolder);
         }
 
         [HttpDelete]
-        public IActionResult DeleteFile(int fileId)
+        public async Task<IActionResult> DeleteFileAsync(int fileId)
         {
-
+            await _fileService.DeleteFileAsync(fileId);
             return Ok();
         }
     }

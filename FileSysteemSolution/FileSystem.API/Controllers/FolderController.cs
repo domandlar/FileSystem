@@ -1,4 +1,6 @@
-﻿using FileSystem.API.Models.Foldes.Requests;
+﻿using FileSystem.API.Entities;
+using FileSystem.API.Models.Foldes.Requests;
+using FileSystem.API.Services.Folders;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,18 +10,28 @@ namespace FileSystem.API.Controllers
     [ApiController]
     public class FolderController : ControllerBase
     {
-        [HttpPost]
-        public IActionResult CreateFolder([FromBody]CreateFolderRequest createFolderRequest)
+        private readonly IFolderService _folderService;
+        public FolderController(IFolderService folderService)
         {
+            _folderService = folderService;
+        }
 
-
-            return Ok();
+        [HttpPost]
+        public async Task<IActionResult> CreateFolderAsync([FromBody]CreateFolderRequest createFolderRequest)
+        {
+            var newFolder = new Folder
+            {
+                Name = createFolderRequest.FolderName,
+                ParentId = createFolderRequest.ParentFolderId.Value
+            };
+            var createdFolder = await _folderService.CreateFolderAsync(newFolder);
+            return Ok(createdFolder);
         }
 
         [HttpDelete]
-        public IActionResult DeleteFolder(int folderId)
+        public async Task<IActionResult> DeleteFolderAsync(int folderId)
         {
-
+            await _folderService.DeleteFolderAsync(folderId);
             return Ok();
         }
     }

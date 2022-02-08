@@ -65,6 +65,14 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Folder.sql" />
     <Build Include="dbo\Tables\File.sql" />
+    <Build Include="dbo\Procedures\CreateFolder.sql" />
+    <Build Include="dbo\Procedures\CreateFile.sql" />
+    <Build Include="dbo\Procedures\DeleteFolder.sql" />
+    <Build Include="dbo\Procedures\DeleteFile.sql" />
+    <Build Include="dbo\Procedures\CheckIfFolderExistsInFolder.sql" />
+    <Build Include="dbo\Procedures\CheckIfFolderExistsById.sql" />
+    <Build Include="dbo\Procedures\CheckIfFileExistsInFolder.sql" />
+    <Build Include="dbo\Procedures\CheckIfFileExistsById.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Scripts\InsertRootFolder.sql" />
