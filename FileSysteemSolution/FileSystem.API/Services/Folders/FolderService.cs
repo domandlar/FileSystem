@@ -1,4 +1,5 @@
 ﻿using FileSystem.API.Entities;
+using FileSystem.API.Exeptions;
 using FileSystem.API.Repositories.Folders;
 
 namespace FileSystem.API.Services.Folders
@@ -21,7 +22,7 @@ namespace FileSystem.API.Services.Folders
             var folderExistsInFolder = await _folderRepository.CheckIfFolderExistsInFolderAsync(folder.Name, folder.ParentId.Value);
             if (folderExistsInFolder)
             {
-                throw new Exception("Folder already exists!");
+                throw new AppException("Folder already exists!");
             }
             var createdFolder = await _folderRepository.CreateFolderAsync(folder);
             return createdFolder;
@@ -32,7 +33,7 @@ namespace FileSystem.API.Services.Folders
             var folderExists = await _folderRepository.CheckIfFolderExistsByIdAsync(folderId);
             if (!folderExists)
             {
-                throw new Exception("Folder does not exist!");
+                throw new AppException("Folder does not exist!");
             }
              await _folderRepository.DeleteFolderAsync(folderId);
         }

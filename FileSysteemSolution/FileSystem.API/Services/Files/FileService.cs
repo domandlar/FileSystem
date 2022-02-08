@@ -1,4 +1,5 @@
-﻿using FileSystem.API.Repositories.Files;
+﻿using FileSystem.API.Exeptions;
+using FileSystem.API.Repositories.Files;
 using FileSystem.API.Repositories.Folders;
 
 namespace FileSystem.API.Services.Files
@@ -20,12 +21,12 @@ namespace FileSystem.API.Services.Files
             var isFileExistsInFolder = await _fileRepository.CheckIfFileExistsInFolderAsync(file.Name, file.FolderId);
             if (isFileExistsInFolder)
             {
-                throw new Exception("File already exists!");
+                throw new AppException("File already exists!");
             }
             var isFolderExists = await _folderRepository.CheckIfFolderExistsByIdAsync(file.FolderId);
             if (!isFolderExists)
             {
-                throw new Exception("Folder does not exist!");
+                throw new AppException("Folder does not exist!");
             }
             var createdFile = await _fileRepository.CreateFileAsync(file);
             return createdFile;
@@ -36,7 +37,7 @@ namespace FileSystem.API.Services.Files
             var fileExists = await _fileRepository.CheckIfFileExistsByIdAsync(fileId);
             if (!fileExists)
             {
-                throw new Exception("File does not exist!");
+                throw new AppException("File does not exist!");
             }
             await _fileRepository.DeleteFileAsync(fileId);
         }

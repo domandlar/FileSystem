@@ -1,3 +1,4 @@
+using FileSystem.API.Helpers;
 using FileSystem.API.Models;
 using FileSystem.API.Repositories.Files;
 using FileSystem.API.Repositories.Folders;
@@ -34,5 +35,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+// global error handler
+app.UseMiddleware<ErrorHandlerMiddleware>();
 
 app.Run();
