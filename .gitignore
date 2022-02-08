@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+FileSysteemSolution/FileSystem.API/bin
+FileSysteemSolution/FileSystem.API/obj
