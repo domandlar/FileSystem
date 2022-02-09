@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace FileSystem.API.Exeptions
+namespace FileSystem.Domain.Exeptions
 {
     public class AppException : Exception
     {

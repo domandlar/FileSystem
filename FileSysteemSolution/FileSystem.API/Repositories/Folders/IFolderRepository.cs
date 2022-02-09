@@ -1,4 +1,4 @@
-﻿using FileSystem.API.Entities;
+﻿using FileSystem.Domain.Entities;
 
 namespace FileSystem.API.Repositories.Folders
 {

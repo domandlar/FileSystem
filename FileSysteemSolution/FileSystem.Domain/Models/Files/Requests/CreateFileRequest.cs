@@ -1,4 +1,4 @@
-﻿namespace FileSystem.API.Models.Files.Requests
+﻿namespace FileSystem.Domain.Models.Files.Requests
 {
     public class CreateFileRequest
     {

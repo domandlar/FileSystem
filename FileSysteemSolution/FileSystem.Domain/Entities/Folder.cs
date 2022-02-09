@@ -1,6 +1,6 @@
-﻿namespace FileSystem.API.Entities
+﻿namespace FileSystem.Domain.Entities
 {
-    public class Folder : BaseEntity
+    public class Folder
     {
         public int Id { get; set; }
         public string Name { get; set; }

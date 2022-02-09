@@ -1,6 +1,5 @@
-﻿using FileSystem.API.Models.Files.Requests;
-using FileSystem.API.Services.Files;
-using Microsoft.AspNetCore.Http;
+﻿using FileSystem.API.Services.Files;
+using FileSystem.Domain.Models.Files.Requests;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FileSystem.API.Controllers
@@ -18,7 +17,7 @@ namespace FileSystem.API.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateFileAsync([FromBody] CreateFileRequest createFileRequest)
         {
-            var newFolder = new Entities.File
+            var newFolder = new Domain.Entities.File
             {
                 Name = createFileRequest.FileName,
                 FolderId = createFileRequest.FolderId

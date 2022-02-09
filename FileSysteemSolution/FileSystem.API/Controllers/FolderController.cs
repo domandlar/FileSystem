@@ -1,7 +1,6 @@
-﻿using FileSystem.API.Entities;
-using FileSystem.API.Models.Foldes.Requests;
-using FileSystem.API.Services.Folders;
-using Microsoft.AspNetCore.Http;
+﻿using FileSystem.API.Services.Folders;
+using FileSystem.Domain.Entities;
+using FileSystem.Domain.Models.Foldes.Requests;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FileSystem.API.Controllers

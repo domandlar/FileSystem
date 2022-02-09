@@ -1,5 +1,5 @@
-﻿using FileSystem.API.Entities;
-using FileSystem.API.Models;
+﻿using FileSystem.Domain.Entities;
+using FileSystem.Domain.Models;
 using Microsoft.Extensions.Options;
 using System.Data;
 using System.Data.SqlClient;

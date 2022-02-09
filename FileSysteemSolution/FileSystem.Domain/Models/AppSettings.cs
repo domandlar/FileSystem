@@ -1,4 +1,4 @@
-﻿namespace FileSystem.API.Models
+﻿namespace FileSystem.Domain.Models
 {
     public class AppSettings
     {

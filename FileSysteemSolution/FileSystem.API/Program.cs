@@ -1,9 +1,9 @@
 using FileSystem.API.Helpers;
-using FileSystem.API.Models;
 using FileSystem.API.Repositories.Files;
 using FileSystem.API.Repositories.Folders;
 using FileSystem.API.Services.Files;
 using FileSystem.API.Services.Folders;
+using FileSystem.Domain.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

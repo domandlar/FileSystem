@@ -1,4 +1,4 @@
-﻿using FileSystem.API.Models;
+﻿using FileSystem.Domain.Models;
 using Microsoft.Extensions.Options;
 using System.Data;
 using System.Data.SqlClient;
@@ -54,7 +54,7 @@ namespace FileSystem.API.Repositories.Files
             }
         }
 
-        public async Task<Entities.File> CreateFileAsync(Entities.File file)
+        public async Task<Domain.Entities.File> CreateFileAsync(Domain.Entities.File file)
         {
             using (var connection = new SqlConnection(_dbConnectionString))
             {

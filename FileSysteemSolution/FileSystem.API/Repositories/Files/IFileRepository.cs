@@ -2,7 +2,7 @@
 {
     public interface IFileRepository
     {
-        Task<Entities.File> CreateFileAsync(Entities.File file);
+        Task<Domain.Entities.File> CreateFileAsync(Domain.Entities.File file);
         Task DeleteFileAsync(int fileId);
         Task<bool> CheckIfFileExistsByIdAsync(int fileId);
         Task<bool> CheckIfFileExistsInFolderAsync(string fileName, int folderId);

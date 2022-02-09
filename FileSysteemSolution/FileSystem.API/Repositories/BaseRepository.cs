@@ -1,4 +1,4 @@
-﻿using FileSystem.API.Models;
+﻿using FileSystem.Domain.Models;
 using Microsoft.Extensions.Options;
 
 namespace FileSystem.API.Repositories

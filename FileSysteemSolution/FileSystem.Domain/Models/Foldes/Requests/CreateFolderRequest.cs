@@ -1,4 +1,4 @@
-﻿namespace FileSystem.API.Models.Foldes.Requests
+﻿namespace FileSystem.Domain.Models.Foldes.Requests
 {
     public class CreateFolderRequest
     {

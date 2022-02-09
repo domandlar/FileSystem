@@ -1,6 +1,6 @@
-﻿using FileSystem.API.Exeptions;
-using FileSystem.API.Repositories.Files;
+﻿using FileSystem.API.Repositories.Files;
 using FileSystem.API.Repositories.Folders;
+using FileSystem.Domain.Exeptions;
 
 namespace FileSystem.API.Services.Files
 {
@@ -15,7 +15,7 @@ namespace FileSystem.API.Services.Files
             _folderRepository = folderRepository;
         }
 
-        public async Task<Entities.File> CreateFileAsync(Entities.File file)
+        public async Task<Domain.Entities.File> CreateFileAsync(Domain.Entities.File file)
         {
 
             var isFileExistsInFolder = await _fileRepository.CheckIfFileExistsInFolderAsync(file.Name, file.FolderId);

@@ -1,6 +1,6 @@
-﻿using FileSystem.API.Entities;
-using FileSystem.API.Exeptions;
-using FileSystem.API.Repositories.Folders;
+﻿using FileSystem.API.Repositories.Folders;
+using FileSystem.Domain.Entities;
+using FileSystem.Domain.Exeptions;
 
 namespace FileSystem.API.Services.Folders
 {
