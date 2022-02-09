@@ -1,6 +1,6 @@
 ﻿using FileSystem.Domain.Entities;
 
-namespace FileSystem.API.Repositories.Folders
+namespace FileSystem.Application.Repositories.Folders
 {
     public interface IFolderRepository
     {

@@ -1,5 +1,6 @@
-﻿using FileSystem.API.Repositories.Files;
-using FileSystem.API.Repositories.Folders;
+﻿using FileSystem.Application.Repositories.Files;
+using FileSystem.Application.Repositories.Folders;
+using FileSystem.Application.Services.Files;
 using FileSystem.Domain.Exeptions;
 
 namespace FileSystem.API.Services.Files

@@ -1,7 +1,7 @@
 ﻿using FileSystem.Domain.Models;
 using Microsoft.Extensions.Options;
 
-namespace FileSystem.API.Repositories
+namespace FileSystem.Application.Repositories
 {
     public abstract class BaseRepository
     {

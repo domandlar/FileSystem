@@ -1,4 +1,4 @@
-﻿namespace FileSystem.API.Repositories.Files
+﻿namespace FileSystem.Application.Repositories.Files
 {
     public interface IFileRepository
     {

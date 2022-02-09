@@ -1,6 +1,6 @@
 ﻿using FileSystem.Domain.Entities;
 
-namespace FileSystem.API.Services.Folders
+namespace FileSystem.Application.Services.Folders
 {
     public interface IFolderService
     {

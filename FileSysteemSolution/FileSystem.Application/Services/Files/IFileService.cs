@@ -1,4 +1,4 @@
-﻿namespace FileSystem.API.Services.Files
+﻿namespace FileSystem.Application.Services.Files
 {
     public interface IFileService
     {

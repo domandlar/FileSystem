@@ -1,8 +1,5 @@
+using FileSystem.API;
 using FileSystem.API.Helpers;
-using FileSystem.API.Repositories.Files;
-using FileSystem.API.Repositories.Folders;
-using FileSystem.API.Services.Files;
-using FileSystem.API.Services.Folders;
 using FileSystem.Domain.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,10 +13,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
-builder.Services.AddScoped<IFolderService, FolderService>();
-builder.Services.AddScoped<IFileService, FileService>();
-builder.Services.AddScoped<IFolderRepository, FolderRepository>();
-builder.Services.AddScoped<IFileRepository, FileRepository>();
+builder.Services.ConfigureServices(builder.Configuration);
+builder.Services.ConfigureRepositories(builder.Configuration);
 
 var app = builder.Build();
 

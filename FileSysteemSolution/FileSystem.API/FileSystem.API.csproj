@@ -15,7 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FileSystem.Application\FileSystem.Application.csproj" />
     <ProjectReference Include="..\FileSystem.Domain\FileSystem.Domain.csproj" />
+    <ProjectReference Include="..\FileSystem.Infrastructure\FileSystem.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

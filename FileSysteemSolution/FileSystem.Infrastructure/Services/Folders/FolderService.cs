@@ -1,4 +1,6 @@
 ﻿using FileSystem.API.Repositories.Folders;
+using FileSystem.Application.Repositories.Folders;
+using FileSystem.Application.Services.Folders;
 using FileSystem.Domain.Entities;
 using FileSystem.Domain.Exeptions;
 
